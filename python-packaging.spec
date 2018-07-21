@@ -8,13 +8,13 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python-packaging
-Version:	16.8
-Release:	3
+Version:	17.1
+Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
-#Source0Download: https://pypi.python.org/simple/packaging
+#Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	53895cdca04ecff80b54128e475b5d3b
+# Source0-md5:	8baf8241d1b6b0a5fae9b00f359976a8
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.6
@@ -40,7 +40,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	python3-sphinx_rtd_theme
-BuildRequires:	sphinx-pdg
+BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python-modules >= 1:2.6
 BuildArch:	noarch
@@ -92,7 +92,8 @@ Dokumentacja API biblioteki Pythona packaging.
 %endif
 
 %if %{with doc}
-%{__make} -C docs html
+%{__make} -C docs html \
+	SPHINXBUILD=sphinx-build-3
 %endif
 
 %install
