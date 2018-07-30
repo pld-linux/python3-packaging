@@ -18,21 +18,21 @@ Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.6
-BuildRequires:	python-setuptools
 %if %{with tests}
 BuildRequires:	python-pretend
 BuildRequires:	python-pyparsing
 BuildRequires:	python-pytest
+BuildRequires:	python-setuptools
 BuildRequires:	python-six
 %endif
 %endif
 %if %{with python3}
 BuildRequires:	python3-modules >= 1:3.2
-BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing
 BuildRequires:	python3-pytest
+BuildRequires:	python3-setuptools
 BuildRequires:	python3-six
 %endif
 %endif
