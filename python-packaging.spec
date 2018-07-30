@@ -43,6 +43,8 @@ BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python-modules >= 1:2.6
+Requires:	six
+Requires:	python-pyparsing >= 2.0.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,6 +59,8 @@ Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Group:		Libraries/Python
 Requires:	python3-modules >= 1:3.2
+Requires:	python-pyparsing >= 2.0.2
+Requires:	six
 
 %description -n python3-packaging
 Core utilities for Python packages.
