@@ -4,6 +4,7 @@
 %bcond_without	tests	# py.test tests
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
+%bcond_without  setuptools # build without setuptools (for bootstraping)
 
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
@@ -18,21 +19,21 @@ Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.6
+%{?with_setuptools:BuildRequires:      python-setuptools}
 %if %{with tests}
 BuildRequires:	python-pretend
 BuildRequires:	python-pyparsing
 BuildRequires:	python-pytest
-BuildRequires:	python-setuptools
 BuildRequires:	python-six
 %endif
 %endif
 %if %{with python3}
 BuildRequires:	python3-modules >= 1:3.2
+%{?with_setuptools:BuildRequires:      python3-setuptools}
 %if %{with tests}
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing
 BuildRequires:	python3-pytest
-BuildRequires:	python3-setuptools
 BuildRequires:	python3-six
 %endif
 %endif
