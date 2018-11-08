@@ -9,13 +9,13 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python-packaging
-Version:	17.1
+Version:	18.0
 Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	8baf8241d1b6b0a5fae9b00f359976a8
+# Source0-md5:	b066f2a33524519cf4e97ab69f462479
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.6
