@@ -9,13 +9,13 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python-packaging
-Version:	19.2
+Version:	20.3
 Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	867ce70984dc7b89bbbc3cac2a72b171
+# Source0-md5:	19e0d1f82a9007b448650ccfeffd0a26
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.7
