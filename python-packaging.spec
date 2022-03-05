@@ -9,13 +9,14 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python-packaging
-Version:	20.3
-Release:	3
+# keep 20.x here for python2 support
+Version:	20.9
+Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	19e0d1f82a9007b448650ccfeffd0a26
+# Source0-md5:	5377308b3ba89f2d78c05e7f485be65d
 URL:		https://github.com/pypa/packaging
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.7
@@ -40,6 +41,7 @@ BuildRequires:	python3-six
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
+BuildRequires:	python3-furo
 BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	sphinx-pdg-3
 %endif
