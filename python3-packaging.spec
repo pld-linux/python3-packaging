@@ -6,7 +6,7 @@
 
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
-Name:		python-packaging
+Name:		python3-packaging
 Version:	21.3
 Release:	1
 License:	Apache v2.0 or BSD
