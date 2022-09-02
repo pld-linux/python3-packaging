@@ -57,7 +57,10 @@ Dokumentacja API biblioteki Pythona packaging.
 %build
 %py3_build
 
-%{?with_tests:%{__python3} -m pytest}
+%if %{with tests}
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+%{__python3} -m pytest
+%endif
 
 %if %{with doc}
 %{__make} -C docs html \
