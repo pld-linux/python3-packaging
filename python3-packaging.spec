@@ -15,6 +15,7 @@ Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
 # Source0-md5:	e713c1939f294fd729af4a7be40dd141
 URL:		https://github.com/pypa/packaging
+BuildRequires:	python3 >= 1:3.6
 BuildRequires:	python3-modules >= 1:3.6
 %{?with_setuptools:BuildRequires:	python3-setuptools}
 %if %{with tests}
