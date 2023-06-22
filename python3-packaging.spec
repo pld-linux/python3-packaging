@@ -17,7 +17,7 @@ Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{
 URL:		https://github.com/pypa/packaging
 BuildRequires:	python3 >= 1:3.6
 BuildRequires:	python3-modules >= 1:3.6
-%{?with_setuptools:BuildRequires:	python3-setuptools >= 61.0.0}
+%{?with_setuptools:BuildRequires:	python3-setuptools >= 1:61.0.0}
 %if %{with tests}
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing >= 2.0.2
