@@ -7,17 +7,17 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python3-packaging
-Version:	21.3
-Release:	4
+Version:	23.1
+Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://files.pythonhosted.org/packages/source/p/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	e713c1939f294fd729af4a7be40dd141
+# Source0-md5:	f7d5c39c6f92cc2dfa1293ba8f6c097c
 URL:		https://github.com/pypa/packaging
 BuildRequires:	python3 >= 1:3.6
 BuildRequires:	python3-modules >= 1:3.6
-%{?with_setuptools:BuildRequires:	python3-setuptools}
+%{?with_setuptools:BuildRequires:	python3-setuptools >= 61.0.0}
 %if %{with tests}
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing >= 2.0.2
@@ -54,6 +54,10 @@ Dokumentacja API biblioteki Pythona packaging.
 
 %prep
 %setup -q -n packaging-%{version}
+cat > setup.py <<EOF
+from setuptools import setup
+setup(version='%{version}')
+EOF
 
 %build
 %py3_build
@@ -78,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG.rst LICENSE LICENSE.BSD README.rst
+%doc LICENSE LICENSE.BSD README.rst
 %{py3_sitescriptdir}/packaging
 %{py3_sitescriptdir}/packaging-%{version}-py*.egg-info
 
