@@ -64,6 +64,7 @@ EOF
 
 %if %{with tests}
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
+PYTHONPATH=$(pwd)/build-3/lib \
 %{__python3} -m pytest
 %endif
 
