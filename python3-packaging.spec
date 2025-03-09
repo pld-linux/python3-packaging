@@ -5,7 +5,7 @@
 %bcond_without	setuptools	# build without setuptools (for bootstraping)
 %bcond_with	bootstrap	# bootstraping for python-rpm-packaging (rpm-pythonprov)
 
-%if %{with boostrap}
+%if %{with bootstrap}
 %undefine	with_doc
 %undefine	with_tests
 %undefine	with_setuptools
