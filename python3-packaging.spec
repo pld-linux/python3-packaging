@@ -3,6 +3,13 @@
 %bcond_without	doc		# don't build doc
 %bcond_without	tests		# py.test tests
 %bcond_without	setuptools	# build without setuptools (for bootstraping)
+%bcond_with	bootstrap	# bootstraping for python-rpm-packaging (rpm-pythonprov)
+
+%if %{with boostrap}
+%undefine	with_doc
+%undefine	with_tests
+%undefine	with_setuptools
+%endif
 
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
@@ -23,7 +30,7 @@ BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing >= 2.0.2
 BuildRequires:	python3-pytest
 %endif
-BuildRequires:	rpm-pythonprov
+%{!?with_bootstrap:BuildRequires:	rpm-pythonprov}
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	python3-furo
