@@ -1,14 +1,12 @@
 #
 # Conditional build:
-%bcond_without	doc		# don't build doc
+%bcond_without	doc		# Sphinx documentation
 %bcond_without	tests		# py.test tests
-%bcond_without	setuptools	# build without setuptools (for bootstraping)
 %bcond_with	bootstrap	# bootstraping for python-rpm-packaging (rpm-pythonprov)
 
 %if %{with bootstrap}
 %undefine	with_doc
 %undefine	with_tests
-%undefine	with_setuptools
 %endif
 
 Summary:	Core utilities for Python packages
@@ -24,7 +22,7 @@ Source0:	https://pypi.debian.net/packaging/packaging-%{version}.tar.gz
 URL:		https://github.com/pypa/packaging
 BuildRequires:	python3 >= 1:3.6
 BuildRequires:	python3-modules >= 1:3.6
-%{?with_setuptools:BuildRequires:	python3-setuptools >= 1:61.0.0}
+BuildRequires:	python3-setuptools >= 1:61.0.0
 %if %{with tests}
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing >= 2.0.2
