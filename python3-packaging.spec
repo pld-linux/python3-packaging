@@ -13,7 +13,7 @@ Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python3-packaging
 Version:	24.2
-Release:	1.2
+Release:	2
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
@@ -33,6 +33,7 @@ BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	python3-furo
 BuildRequires:	python3-sphinx_rtd_theme
+BuildRequires:	python3-sphinx-toolbox
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.6
