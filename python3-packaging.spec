@@ -12,13 +12,13 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python3-packaging
-Version:	24.2
-Release:	2
+Version:	25.0
+Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://pypi.debian.net/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	97dbaca91e00d6b9fd86866e8c7897ae
+# Source0-md5:	ab0ef21ddebe09d1803575120d3f99f8
 URL:		https://github.com/pypa/packaging
 BuildRequires:	python3 >= 1:3.6
 BuildRequires:	python3-modules >= 1:3.6
@@ -27,6 +27,7 @@ BuildRequires:	python3-setuptools >= 1:61.0.0
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pyparsing >= 2.0.2
 BuildRequires:	python3-pytest
+BuildRequires:	python3-tomli_w
 %endif
 %{!?with_bootstrap:BuildRequires:	rpm-pythonprov}
 BuildRequires:	rpmbuild(macros) >= 1.714
