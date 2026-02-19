@@ -20,25 +20,26 @@ Group:		Libraries/Python
 Source0:	https://pypi.debian.net/packaging/packaging-%{version}.tar.gz
 # Source0-md5:	ab0ef21ddebe09d1803575120d3f99f8
 URL:		https://github.com/pypa/packaging
-BuildRequires:	python3 >= 1:3.6
-BuildRequires:	python3-modules >= 1:3.6
+BuildRequires:	python3 >= 1:3.8
+BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools >= 1:61.0.0
 %if %{with tests}
 BuildRequires:	python3-pretend
-BuildRequires:	python3-pyparsing >= 2.0.2
-BuildRequires:	python3-pytest
+BuildRequires:	python3-pytest >= 6.2.0
+# indirect???
 BuildRequires:	python3-tomli_w
 %endif
 %{!?with_bootstrap:BuildRequires:	rpm-pythonprov}
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	python3-furo
-BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	python3-sphinx-toolbox
+%if "%{py3_ver}" == "3.8"
+BuildRequires:	python3-typing_extensions >= 4.1.0
+%endif
 BuildRequires:	sphinx-pdg-3
 %endif
-Requires:	python3-modules >= 1:3.6
-Requires:	python3-pyparsing >= 2.0.2
+Requires:	python3-modules >= 1:3.8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
