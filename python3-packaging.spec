@@ -12,13 +12,13 @@
 Summary:	Core utilities for Python packages
 Summary(pl.UTF-8):	Bazowe funkcje narzędziowe do pakietów Pythona
 Name:		python3-packaging
-Version:	25.0
+Version:	26.1
 Release:	1
 License:	Apache v2.0 or BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/packaging/
 Source0:	https://pypi.debian.net/packaging/packaging-%{version}.tar.gz
-# Source0-md5:	ab0ef21ddebe09d1803575120d3f99f8
+# Source0-md5:	5ffd78380493f7a7948c140fae4f1995
 URL:		https://github.com/pypa/packaging
 BuildRequires:	python3 >= 1:3.8
 BuildRequires:	python3-modules >= 1:3.8
