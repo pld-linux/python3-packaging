@@ -24,6 +24,7 @@ BuildRequires:	python3 >= 1:3.8
 BuildRequires:	python3-modules >= 1:3.8
 BuildRequires:	python3-setuptools >= 1:61.0.0
 %if %{with tests}
+BuildRequires:	python3-hypothesis >= 6.0.0
 BuildRequires:	python3-pretend
 BuildRequires:	python3-pytest >= 6.2.0
 # indirect???
